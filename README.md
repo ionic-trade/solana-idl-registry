@@ -1,6 +1,6 @@
 # Solana IDL registry
 
-This is Ionic Solana IDL registry - first complete and always up-to-date registry for Solana IDL-s
+This is Ionic Solana IDL registry - first complete and always up-to-date registry for Solana IDL-s. We will open source rest of our indexing stack soon!
 
 **If you have any questions / requests / something is missing ping [@sok2054](https://t.me/sok2054) on tg**
 

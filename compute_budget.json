@@ -1,0 +1,110 @@
+{
+  "address": "ComputeBudget111111111111111111111111111111",
+  "metadata": {
+    "name": "compute_budget",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "request_units",
+      "docs": [
+        "Request additional compute units for the transaction and an optional prioritization fee."
+      ],
+      "discriminator": [
+        0
+      ],
+      "accounts": [],
+      "args": [
+        {
+          "name": "units",
+          "docs": [
+            "Units to request for transaction-wide compute."
+          ],
+          "type": "u32"
+        },
+        {
+          "name": "additional_fee",
+          "docs": [
+            "Prioritization fee lamports."
+          ],
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "request_heap_frame",
+      "docs": [
+        "Request a larger per-program heap frame size for the whole transaction."
+      ],
+      "discriminator": [
+        1
+      ],
+      "accounts": [],
+      "args": [
+        {
+          "name": "bytes",
+          "docs": [
+            "Requested transaction-wide program heap size in bytes.",
+            "Must be multiple of 1024. Applies to each program, including CPIs."
+          ],
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "set_compute_unit_limit",
+      "docs": [
+        "Set the transaction-wide compute unit limit."
+      ],
+      "discriminator": [
+        2
+      ],
+      "accounts": [],
+      "args": [
+        {
+          "name": "units",
+          "docs": [
+            "Transaction-wide compute unit limit."
+          ],
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "set_compute_unit_price",
+      "docs": [
+        "Set the transaction-wide compute unit price used for prioritization fees."
+      ],
+      "discriminator": [
+        3
+      ],
+      "accounts": [],
+      "args": [
+        {
+          "name": "micro_lamports",
+          "docs": [
+            "Transaction compute unit price used for prioritization fees."
+          ],
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_loaded_accounts_data_size_limit",
+      "docs": [
+        "Set the transaction-wide loaded accounts data size limit."
+      ],
+      "discriminator": [
+        4
+      ],
+      "accounts": [],
+      "args": [
+        {
+          "name": "account_data_size_limit",
+          "type": "u32"
+        }
+      ]
+    }
+  ]
+}

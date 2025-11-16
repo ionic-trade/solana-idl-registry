@@ -1,0 +1,518 @@
+{
+  "address": "11111111111111111111111111111111",
+  "metadata": {
+    "name": "system",
+    "version": "0.0.1",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "create_account",
+      "discriminator": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "new_account",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "lamports",
+          "type": "u64"
+        },
+        {
+          "name": "space",
+          "type": "u64"
+        },
+        {
+          "name": "program_address",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "assign",
+      "discriminator": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "account",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "program_address",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "transfer_sol",
+      "discriminator": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "source",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "create_account_with_seed",
+      "discriminator": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "new_account",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "base",
+          "type": "pubkey"
+        },
+        {
+          "name": "seed",
+          "type": "string"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "space",
+          "type": "u64"
+        },
+        {
+          "name": "program_address",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "advance_nonce_account",
+      "discriminator": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "nonce_account",
+          "writable": true
+        },
+        {
+          "name": "recent_blockhashes_sysvar"
+        },
+        {
+          "name": "nonce_authority",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdraw_nonce_account",
+      "discriminator": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "nonce_account",
+          "writable": true
+        },
+        {
+          "name": "recipient_account",
+          "writable": true
+        },
+        {
+          "name": "recent_blockhashes_sysvar"
+        },
+        {
+          "name": "rent_sysvar"
+        },
+        {
+          "name": "nonce_authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "withdraw_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_nonce_account",
+      "discriminator": [
+        6,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "nonce_account",
+          "writable": true
+        },
+        {
+          "name": "recent_blockhashes_sysvar"
+        },
+        {
+          "name": "rent_sysvar"
+        }
+      ],
+      "args": [
+        {
+          "name": "nonce_authority",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "authorize_nonce_account",
+      "discriminator": [
+        7,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "nonce_account",
+          "writable": true
+        },
+        {
+          "name": "nonce_authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_nonce_authority",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "allocate",
+      "discriminator": [
+        8,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "new_account",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "space",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "allocate_with_seed",
+      "discriminator": [
+        9,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "new_account",
+          "writable": true
+        },
+        {
+          "name": "base_account",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "base",
+          "type": "pubkey"
+        },
+        {
+          "name": "seed",
+          "type": "string"
+        },
+        {
+          "name": "space",
+          "type": "u64"
+        },
+        {
+          "name": "program_address",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "assign_with_seed",
+      "discriminator": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "account",
+          "writable": true
+        },
+        {
+          "name": "base_account",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "base",
+          "type": "pubkey"
+        },
+        {
+          "name": "seed",
+          "type": "string"
+        },
+        {
+          "name": "program_address",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "transfer_sol_with_seed",
+      "discriminator": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "base_account",
+          "signer": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "from_seed",
+          "type": "string"
+        },
+        {
+          "name": "from_owner",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "upgrade_nonce_account",
+      "discriminator": [
+        12,
+        0,
+        0,
+        0
+      ],
+      "accounts": [
+        {
+          "name": "nonce_account",
+          "writable": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Nonce",
+      "discriminator": [
+        143,
+        197,
+        147,
+        95,
+        106,
+        165,
+        50,
+        43
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 0,
+      "name": "AccountAlreadyInUse",
+      "msg": "an account with the same address already exists"
+    },
+    {
+      "code": 1,
+      "name": "ResultWithNegativeLamports",
+      "msg": "account does not have enough SOL to perform the operation"
+    },
+    {
+      "code": 2,
+      "name": "InvalidProgramId",
+      "msg": "cannot assign account to this program id"
+    },
+    {
+      "code": 3,
+      "name": "InvalidAccountDataLength",
+      "msg": "cannot allocate account data of this length"
+    },
+    {
+      "code": 4,
+      "name": "MaxSeedLengthExceeded",
+      "msg": "length of requested seed is too long"
+    },
+    {
+      "code": 5,
+      "name": "AddressWithSeedMismatch",
+      "msg": "provided address does not match addressed derived from seed"
+    },
+    {
+      "code": 6,
+      "name": "NonceNoRecentBlockhashes",
+      "msg": "advancing stored nonce requires a populated RecentBlockhashes sysvar"
+    },
+    {
+      "code": 7,
+      "name": "NonceBlockhashNotExpired",
+      "msg": "stored nonce is still in recent_blockhashes"
+    },
+    {
+      "code": 8,
+      "name": "NonceUnexpectedBlockhashValue",
+      "msg": "specified nonce does not match stored nonce"
+    }
+  ],
+  "types": [
+    {
+      "name": "NonceVersion",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Legacy"
+          },
+          {
+            "name": "Current"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NonceState",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Uninitialized"
+          },
+          {
+            "name": "Initialized"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nonce",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": {
+              "defined": {
+                "name": "NonceVersion"
+              }
+            }
+          },
+          {
+            "name": "state",
+            "type": {
+              "defined": {
+                "name": "NonceState"
+              }
+            }
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "blockhash",
+            "type": "pubkey"
+          },
+          {
+            "name": "lamports_per_signature",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "address": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
   "metadata": {
-    "name": "raydium_amm",
+    "name": "raydium_amm_v4",
     "version": "0.3.0",
     "spec": "0.1.0"
   },
@@ -9,21 +9,14 @@
     {
       "name": "initialize",
       "discriminator": [
-        175,
-        175,
-        109,
-        31,
-        13,
-        152,
-        155,
-        237
+        0
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
-          "name": "system_program"
+          "name": "systemProgram"
         },
         {
           "name": "rent"
@@ -33,51 +26,51 @@
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "lp_mint_address",
+          "name": "lpMintAddress",
           "writable": true
         },
         {
-          "name": "coin_mint_address"
+          "name": "coinMintAddress"
         },
         {
-          "name": "pc_mint_address"
+          "name": "pcMintAddress"
         },
         {
-          "name": "pool_coin_token_account"
+          "name": "poolCoinTokenAccount"
         },
         {
-          "name": "pool_pc_token_account"
+          "name": "poolPcTokenAccount"
         },
         {
-          "name": "pool_withdraw_queue",
+          "name": "poolWithdrawQueue",
           "writable": true
         },
         {
-          "name": "pool_target_orders_account",
+          "name": "poolTargetOrdersAccount",
           "writable": true
         },
         {
-          "name": "user_lp_token_account",
+          "name": "userLpTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_temp_lp_token_account"
+          "name": "poolTempLpTokenAccount"
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market"
+          "name": "serumMarket"
         },
         {
-          "name": "user_wallet",
+          "name": "userWallet",
           "writable": true,
           "signer": true
         }
@@ -88,7 +81,7 @@
           "type": "u8"
         },
         {
-          "name": "open_time",
+          "name": "openTime",
           "type": "u64"
         }
       ]
@@ -96,24 +89,17 @@
     {
       "name": "initialize2",
       "discriminator": [
-        9,
-        203,
-        254,
-        64,
-        89,
-        32,
-        179,
-        159
+        1
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
-          "name": "spl_associated_token_account"
+          "name": "splAssociatedTokenAccount"
         },
         {
-          "name": "system_program"
+          "name": "systemProgram"
         },
         {
           "name": "rent"
@@ -123,63 +109,63 @@
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "lp_mint",
+          "name": "lpMint",
           "writable": true
         },
         {
-          "name": "coin_mint"
+          "name": "coinMint"
         },
         {
-          "name": "pc_mint"
+          "name": "pcMint"
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_withdraw_queue",
+          "name": "poolWithdrawQueue",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "pool_temp_lp",
+          "name": "poolTempLp",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market"
+          "name": "serumMarket"
         },
         {
-          "name": "user_wallet",
+          "name": "userWallet",
           "writable": true,
           "signer": true
         },
         {
-          "name": "user_token_coin",
+          "name": "userTokenCoin",
           "writable": true
         },
         {
-          "name": "user_token_pc",
+          "name": "userTokenPc",
           "writable": true
         },
         {
-          "name": "user_lp_token_account",
+          "name": "userLpTokenAccount",
           "writable": true
         }
       ],
@@ -189,34 +175,27 @@
           "type": "u8"
         },
         {
-          "name": "open_time",
+          "name": "openTime",
           "type": "u64"
         },
         {
-          "name": "init_pc_amount",
+          "name": "initPcAmount",
           "type": "u64"
         },
         {
-          "name": "init_coin_amount",
+          "name": "initCoinAmount",
           "type": "u64"
         }
       ]
     },
     {
-      "name": "monitor_step",
+      "name": "monitorStep",
       "discriminator": [
-        252,
-        219,
-        18,
-        48,
-        87,
-        183,
-        26,
-        154
+        2
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "rent"
@@ -229,74 +208,84 @@
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_withdraw_queue",
+          "name": "poolWithdrawQueue",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
         },
         {
-          "name": "serum_req_q",
+          "name": "serumReqQ",
           "writable": true
         },
         {
-          "name": "serum_event_q",
+          "name": "serumEventQ",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumAsks",
           "writable": true
+        },
+        {
+          "name": "serumFeeDiscount",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "referrerPcAccount",
+          "writable": true,
+          "optional": true
         }
       ],
       "args": [
         {
-          "name": "plan_order_limit",
+          "name": "planOrderLimit",
           "type": "u16"
         },
         {
-          "name": "place_order_limit",
+          "name": "placeOrderLimit",
           "type": "u16"
         },
         {
-          "name": "cancel_order_limit",
+          "name": "cancelOrderLimit",
           "type": "u16"
         }
       ]
@@ -304,79 +293,72 @@
     {
       "name": "deposit",
       "discriminator": [
-        242,
-        35,
-        198,
-        137,
-        82,
-        225,
-        242,
-        182
+        3
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders"
+          "name": "ammOpenOrders"
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "lp_mint_address",
+          "name": "lpMintAddress",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "serum_market"
+          "name": "serumMarket"
         },
         {
-          "name": "user_coin_token_account",
+          "name": "userCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "user_pc_token_account",
+          "name": "userPcTokenAccount",
           "writable": true
         },
         {
-          "name": "user_lp_token_account",
+          "name": "userLpTokenAccount",
           "writable": true
         },
         {
-          "name": "user_owner",
+          "name": "userOwner",
           "signer": true
         },
         {
-          "name": "serum_event_queue"
+          "name": "serumEventQueue"
         }
       ],
       "args": [
         {
-          "name": "max_coin_amount",
+          "name": "maxCoinAmount",
           "type": "u64"
         },
         {
-          "name": "max_pc_amount",
+          "name": "maxPcAmount",
           "type": "u64"
         },
         {
-          "name": "base_side",
+          "name": "baseSide",
           "type": "u64"
         }
       ]
@@ -384,98 +366,91 @@
     {
       "name": "withdraw",
       "discriminator": [
-        183,
-        18,
-        70,
-        156,
-        148,
-        109,
-        161,
-        34
+        4
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "lp_mint_address",
+          "name": "lpMintAddress",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_withdraw_queue",
+          "name": "poolWithdrawQueue",
           "writable": true
         },
         {
-          "name": "pool_temp_lp_token_account",
+          "name": "poolTempLpTokenAccount",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
         },
         {
-          "name": "user_lp_token_account",
+          "name": "userLpTokenAccount",
           "writable": true
         },
         {
-          "name": "uer_coin_token_account",
+          "name": "userCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "uer_pc_token_account",
+          "name": "userPcTokenAccount",
           "writable": true
         },
         {
-          "name": "user_owner",
+          "name": "userOwner",
           "signer": true
         },
         {
-          "name": "serum_event_q",
+          "name": "serumEventQ",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumAsks",
           "writable": true
         }
       ],
@@ -487,23 +462,16 @@
       ]
     },
     {
-      "name": "migrate_to_open_book",
+      "name": "migrateToOpenBook",
       "discriminator": [
-        207,
-        98,
-        243,
-        89,
-        114,
-        174,
-        205,
-        20
+        5
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
-          "name": "system_program"
+          "name": "systemProgram"
         },
         {
           "name": "rent"
@@ -513,63 +481,63 @@
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_token_coin",
+          "name": "ammTokenCoin",
           "writable": true
         },
         {
-          "name": "amm_token_pc",
+          "name": "ammTokenPc",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumAsks",
           "writable": true
         },
         {
-          "name": "serum_event_queue",
+          "name": "serumEventQueue",
           "writable": true
         },
         {
-          "name": "serum_coin_vault",
+          "name": "serumCoinVault",
           "writable": true
         },
         {
-          "name": "serum_pc_vault",
+          "name": "serumPcVault",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
         },
         {
-          "name": "new_amm_open_orders",
+          "name": "newAmmOpenOrders",
           "writable": true
         },
         {
-          "name": "new_serum_program"
+          "name": "newSerumProgram"
         },
         {
-          "name": "new_serum_market"
+          "name": "newSerumMarket"
         },
         {
           "name": "admin",
@@ -580,77 +548,74 @@
       "args": []
     },
     {
-      "name": "set_params",
+      "name": "setParams",
       "discriminator": [
-        27,
-        234,
-        178,
-        52,
-        147,
-        2,
-        187,
-        141
+        6
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "amm_coin_vault",
+          "name": "ammCoinVault",
           "writable": true
         },
         {
-          "name": "amm_pc_vault",
+          "name": "ammPcVault",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_coin_vault",
+          "name": "serumCoinVault",
           "writable": true
         },
         {
-          "name": "serum_pc_vault",
+          "name": "serumPcVault",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
         },
         {
-          "name": "serum_event_queue",
+          "name": "serumEventQueue",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumAsks",
           "writable": true
         },
         {
-          "name": "amm_admin_account",
+          "name": "ammAdminAccount",
           "signer": true
+        },
+        {
+          "name": "newAmmOpenOrdersAccount",
+          "optional": true
         }
       ],
       "args": [
@@ -665,7 +630,7 @@
           }
         },
         {
-          "name": "new_pubkey",
+          "name": "newPubkey",
           "type": {
             "option": "pubkey"
           }
@@ -681,7 +646,7 @@
           }
         },
         {
-          "name": "last_order_distance",
+          "name": "lastOrderDistance",
           "type": {
             "option": {
               "defined": {
@@ -691,7 +656,7 @@
           }
         },
         {
-          "name": "need_take_amounts",
+          "name": "needTakeAmounts",
           "type": {
             "option": {
               "defined": {
@@ -703,115 +668,105 @@
       ]
     },
     {
-      "name": "withdraw_pnl",
+      "name": "withdrawPnl",
       "discriminator": [
-        86,
-        36,
-        158,
-        158,
-        92,
-        241,
-        251,
-        94
+        7
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_config"
+          "name": "ammConfig"
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "coin_pnl_token_account",
+          "name": "coinPnlTokenAccount",
           "writable": true
         },
         {
-          "name": "pc_pnl_token_account",
+          "name": "pcPnlTokenAccount",
           "writable": true
         },
         {
-          "name": "pnl_owner_account",
+          "name": "pnlOwnerAccount",
           "signer": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_event_queue"
+          "name": "serumEventQueue"
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
+        },
+        {
+          "name": "referrerPcAccount",
+          "optional": true
         }
       ],
       "args": []
     },
     {
-      "name": "withdraw_srm",
+      "name": "withdrawSrm",
       "discriminator": [
-        193,
-        101,
-        58,
-        65,
-        120,
-        78,
-        99,
-        31
+        8
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm"
         },
         {
-          "name": "amm_owner_account",
+          "name": "ammOwnerAccount",
           "signer": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "srm_token",
+          "name": "srmToken",
           "writable": true
         },
         {
-          "name": "dest_srm_token",
+          "name": "destSrmToken",
           "writable": true
         }
       ],
@@ -823,158 +778,140 @@
       ]
     },
     {
-      "name": "swap_base_in",
+      "name": "swapBaseIn",
       "discriminator": [
-        42,
-        236,
-        72,
-        162,
-        242,
-        24,
-        39,
-        84
+        9
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "serumProgram"
+        },
+        {
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_program"
-        },
-        {
-          "name": "serum_market",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumAsks",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumEventQueue",
           "writable": true
         },
         {
-          "name": "serum_event_queue",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumVaultSigner"
+        },
+        {
+          "name": "userSourceTokenAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
-        },
-        {
-          "name": "uer_source_token_account",
+          "name": "userDestinationTokenAccount",
           "writable": true
         },
         {
-          "name": "uer_destination_token_account",
-          "writable": true
-        },
-        {
-          "name": "user_source_owner",
+          "name": "userSourceOwner",
           "signer": true
         }
       ],
       "args": [
         {
-          "name": "amount_in",
+          "name": "amountIn",
           "type": "u64"
         },
         {
-          "name": "minimum_amount_out",
+          "name": "minimumAmountOut",
           "type": "u64"
         }
       ]
     },
     {
-      "name": "pre_initialize",
+      "name": "preInitialize",
       "discriminator": [
-        255,
-        92,
-        87,
-        45,
-        198,
-        172,
-        236,
-        2
+        10
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
-          "name": "system_program"
+          "name": "systemProgram"
         },
         {
           "name": "rent"
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "pool_withdraw_queue",
+          "name": "poolWithdrawQueue",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "lp_mint_address",
+          "name": "lpMintAddress",
           "writable": true
         },
         {
-          "name": "coin_mint_address"
+          "name": "coinMintAddress"
         },
         {
-          "name": "pc_mint_address"
+          "name": "pcMintAddress"
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_temp_lp_token_account",
+          "name": "poolTempLpTokenAccount",
           "writable": true
         },
         {
-          "name": "serum_market"
+          "name": "serumMarket"
         },
         {
-          "name": "user_wallet",
+          "name": "userWallet",
           "writable": true,
           "signer": true
         }
@@ -987,134 +924,116 @@
       ]
     },
     {
-      "name": "swap_base_out",
+      "name": "swapBaseOut",
       "discriminator": [
-        163,
-        210,
-        155,
-        208,
-        175,
-        146,
-        213,
-        150
+        11
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm",
           "writable": true
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "serumProgram"
+        },
+        {
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_program"
-        },
-        {
-          "name": "serum_market",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumAsks",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumEventQueue",
           "writable": true
         },
         {
-          "name": "serum_event_queue",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumVaultSigner"
+        },
+        {
+          "name": "userSourceTokenAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
-        },
-        {
-          "name": "uer_source_token_account",
+          "name": "userDestinationTokenAccount",
           "writable": true
         },
         {
-          "name": "uer_destination_token_account",
-          "writable": true
-        },
-        {
-          "name": "user_source_owner",
+          "name": "userSourceOwner",
           "signer": true
         }
       ],
       "args": [
         {
-          "name": "max_amount_in",
+          "name": "maxAmountIn",
           "type": "u64"
         },
         {
-          "name": "amount_out",
+          "name": "amountOut",
           "type": "u64"
         }
       ]
     },
     {
-      "name": "simulate_info",
+      "name": "simulateInfo",
       "discriminator": [
-        195,
-        75,
-        104,
-        72,
-        253,
-        176,
-        183,
-        160
+        12
       ],
       "accounts": [
         {
           "name": "amm"
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders"
+          "name": "ammOpenOrders"
         },
         {
-          "name": "pool_coin_token_account"
+          "name": "poolCoinTokenAccount"
         },
         {
-          "name": "pool_pc_token_account"
+          "name": "poolPcTokenAccount"
         },
         {
-          "name": "lp_mint_address"
+          "name": "lpMintAddress"
         },
         {
-          "name": "serum_market"
+          "name": "serumMarket"
         },
         {
-          "name": "serum_event_queue"
+          "name": "serumEventQueue"
         }
       ],
       "args": [
@@ -1123,7 +1042,7 @@
           "type": "u8"
         },
         {
-          "name": "swap_base_in_value",
+          "name": "swapBaseInValue",
           "type": {
             "option": {
               "defined": {
@@ -1133,7 +1052,7 @@
           }
         },
         {
-          "name": "swap_base_out_value",
+          "name": "swapBaseOutValue",
           "type": {
             "option": {
               "defined": {
@@ -1145,79 +1064,72 @@
       ]
     },
     {
-      "name": "admin_cancel_orders",
+      "name": "adminCancelOrders",
       "discriminator": [
-        151,
-        90,
-        110,
-        217,
-        196,
-        223,
-        251,
-        95
+        13
       ],
       "accounts": [
         {
-          "name": "token_program"
+          "name": "tokenProgram"
         },
         {
           "name": "amm"
         },
         {
-          "name": "amm_authority"
+          "name": "ammAuthority"
         },
         {
-          "name": "amm_open_orders",
+          "name": "ammOpenOrders",
           "writable": true
         },
         {
-          "name": "amm_target_orders",
+          "name": "ammTargetOrders",
           "writable": true
         },
         {
-          "name": "pool_coin_token_account",
+          "name": "poolCoinTokenAccount",
           "writable": true
         },
         {
-          "name": "pool_pc_token_account",
+          "name": "poolPcTokenAccount",
           "writable": true
         },
         {
-          "name": "amm_owner_account",
+          "name": "ammOwnerAccount",
           "signer": true
         },
         {
-          "name": "amm_config",
+          "name": "ammConfig",
           "writable": true
         },
         {
-          "name": "serum_program"
+          "name": "serumProgram"
         },
         {
-          "name": "serum_market",
+          "name": "serumMarket",
           "writable": true
         },
         {
-          "name": "serum_coin_vault_account",
+          "name": "serumCoinVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_pc_vault_account",
+          "name": "serumPcVaultAccount",
           "writable": true
         },
         {
-          "name": "serum_vault_signer"
+          "name": "serumVaultSigner"
         },
         {
-          "name": "serum_event_q",
+          "name": "serumEventQ",
           "writable": true
         },
         {
-          "name": "serum_bids",
+          "name": "serumBids",
           "writable": true
         },
         {
-          "name": "serum_asks",
+          "name": "serumAsks",
           "writable": true
         }
       ],
@@ -1229,16 +1141,9 @@
       ]
     },
     {
-      "name": "create_config_account",
+      "name": "createConfigAccount",
       "discriminator": [
-        190,
-        227,
-        122,
-        84,
-        73,
-        166,
-        40,
-        100
+        14
       ],
       "accounts": [
         {
@@ -1247,14 +1152,14 @@
           "signer": true
         },
         {
-          "name": "amm_config",
+          "name": "ammConfig",
           "writable": true
         },
         {
           "name": "owner"
         },
         {
-          "name": "system_program"
+          "name": "systemProgram"
         },
         {
           "name": "rent"
@@ -1263,16 +1168,9 @@
       "args": []
     },
     {
-      "name": "update_config_account",
+      "name": "updateConfigAccount",
       "discriminator": [
-        240,
-        32,
-        10,
-        152,
-        8,
-        45,
-        87,
-        58
+        15
       ],
       "accounts": [
         {
@@ -1280,7 +1178,7 @@
           "signer": true
         },
         {
-          "name": "amm_config",
+          "name": "ammConfig",
           "writable": true
         }
       ],
@@ -1294,47 +1192,388 @@
           "type": "pubkey"
         }
       ]
+    },
+    {
+      "name": "swapBaseInV2",
+      "discriminator": [
+        16
+      ],
+      "accounts": [
+        {
+          "name": "tokenProgram"
+        },
+        {
+          "name": "amm",
+          "writable": true
+        },
+        {
+          "name": "ammAuthority"
+        },
+        {
+          "name": "ammCoinVault",
+          "writable": true
+        },
+        {
+          "name": "ammPcVault",
+          "writable": true
+        },
+        {
+          "name": "userTokenSource",
+          "writable": true
+        },
+        {
+          "name": "userTokenDestination",
+          "writable": true
+        },
+        {
+          "name": "userSourceOwner",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amountIn",
+          "type": "u64"
+        },
+        {
+          "name": "minimumAmountOut",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "swapBaseOutV2",
+      "discriminator": [
+        17
+      ],
+      "accounts": [
+        {
+          "name": "tokenProgram"
+        },
+        {
+          "name": "amm",
+          "writable": true
+        },
+        {
+          "name": "ammAuthority"
+        },
+        {
+          "name": "ammCoinVault",
+          "writable": true
+        },
+        {
+          "name": "ammPcVault",
+          "writable": true
+        },
+        {
+          "name": "userTokenSource",
+          "writable": true
+        },
+        {
+          "name": "userTokenDestination",
+          "writable": true
+        },
+        {
+          "name": "userSourceOwner",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "maxAmountIn",
+          "type": "u64"
+        },
+        {
+          "name": "amountOut",
+          "type": "u64"
+        }
+      ]
     }
   ],
-  "accounts": [
+  "types": [
     {
-      "name": "TargetOrders",
-      "discriminator": [
-        113,
-        225,
-        140,
-        255,
-        65,
-        144,
-        239,
-        231
-      ]
+      "name": "WithdrawDestToken",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "withdrawAmount",
+            "type": "u64"
+          },
+          {
+            "name": "coinAmount",
+            "type": "u64"
+          },
+          {
+            "name": "pcAmount",
+            "type": "u64"
+          },
+          {
+            "name": "destTokenCoin",
+            "type": "pubkey"
+          },
+          {
+            "name": "destTokenPc",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WithdrawQueue",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": {
+              "array": [
+                "u64",
+                4
+              ]
+            }
+          },
+          {
+            "name": "head",
+            "type": "u64"
+          },
+          {
+            "name": "count",
+            "type": "u64"
+          },
+          {
+            "name": "buf",
+            "type": {
+              "array": [
+                {
+                  "defined": {
+                    "name": "WithdrawDestToken"
+                  }
+                },
+                64
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "TargetOrder",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "price",
+            "type": "u64"
+          },
+          {
+            "name": "vol",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OutPutData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "needTakePnlCoin",
+            "type": "u64"
+          },
+          {
+            "name": "needTakePnlPc",
+            "type": "u64"
+          },
+          {
+            "name": "totalPnlPc",
+            "type": "u64"
+          },
+          {
+            "name": "totalPnlCoin",
+            "type": "u64"
+          },
+          {
+            "name": "poolOpenTime",
+            "type": "u64"
+          },
+          {
+            "name": "punishPcAmount",
+            "type": "u64"
+          },
+          {
+            "name": "punishCoinAmount",
+            "type": "u64"
+          },
+          {
+            "name": "orderbookToInitTime",
+            "type": "u64"
+          },
+          {
+            "name": "swapCoinInAmount",
+            "type": "u128"
+          },
+          {
+            "name": "swapPcOutAmount",
+            "type": "u128"
+          },
+          {
+            "name": "swapTakePcFee",
+            "type": "u64"
+          },
+          {
+            "name": "swapPcInAmount",
+            "type": "u128"
+          },
+          {
+            "name": "swapCoinOutAmount",
+            "type": "u128"
+          },
+          {
+            "name": "swapTakeCoinFee",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AmmConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pnlOwner",
+            "type": "pubkey"
+          },
+          {
+            "name": "cancelOwner",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending1",
+            "type": {
+              "array": [
+                "u64",
+                28
+              ]
+            }
+          },
+          {
+            "name": "pending2",
+            "type": {
+              "array": [
+                "u64",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "LastOrderDistance",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "lastOrderNumerator",
+            "type": "u64"
+          },
+          {
+            "name": "lastOrderDenominator",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NeedTake",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "needTakePc",
+            "type": "u64"
+          },
+          {
+            "name": "needTakeCoin",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SwapInstructionBaseIn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amountIn",
+            "type": "u64"
+          },
+          {
+            "name": "minimumAmountOut",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SwapInstructionBaseOut",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "maxAmountIn",
+            "type": "u64"
+          },
+          {
+            "name": "amountOut",
+            "type": "u64"
+          }
+        ]
+      }
     },
     {
       "name": "Fees",
-      "discriminator": [
-        151,
-        157,
-        50,
-        115,
-        130,
-        72,
-        179,
-        36
-      ]
-    },
-    {
-      "name": "AmmInfo",
-      "discriminator": [
-        33,
-        217,
-        2,
-        203,
-        184,
-        83,
-        235,
-        91
-      ]
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "minSeparateNumerator",
+            "type": "u64"
+          },
+          {
+            "name": "minSeparateDenominator",
+            "type": "u64"
+          },
+          {
+            "name": "tradeFeeNumerator",
+            "type": "u64"
+          },
+          {
+            "name": "tradeFeeDenominator",
+            "type": "u64"
+          },
+          {
+            "name": "pnlNumerator",
+            "type": "u64"
+          },
+          {
+            "name": "pnlDenominator",
+            "type": "u64"
+          },
+          {
+            "name": "swapFeeNumerator",
+            "type": "u64"
+          },
+          {
+            "name": "swapFeeDenominator",
+            "type": "u64"
+          }
+        ]
+      }
     }
   ],
   "errors": [
@@ -1622,601 +1861,6 @@
       "code": 56,
       "name": "UnknownAmmError",
       "msg": "Unknown Amm Error"
-    }
-  ],
-  "types": [
-    {
-      "name": "WithdrawDestToken",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "withdraw_amount",
-            "type": "u64"
-          },
-          {
-            "name": "coin_amount",
-            "type": "u64"
-          },
-          {
-            "name": "pc_amount",
-            "type": "u64"
-          },
-          {
-            "name": "dest_token_coin",
-            "type": "pubkey"
-          },
-          {
-            "name": "dest_token_pc",
-            "type": "pubkey"
-          }
-        ]
-      }
-    },
-    {
-      "name": "WithdrawQueue",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "owner",
-            "type": {
-              "array": [
-                "u64",
-                4
-              ]
-            }
-          },
-          {
-            "name": "head",
-            "type": "u64"
-          },
-          {
-            "name": "count",
-            "type": "u64"
-          },
-          {
-            "name": "buf",
-            "type": {
-              "array": [
-                {
-                  "defined": {
-                    "name": "WithdrawDestToken"
-                  }
-                },
-                64
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "TargetOrder",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "price",
-            "type": "u64"
-          },
-          {
-            "name": "vol",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "OutPutData",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "need_take_pnl_coin",
-            "type": "u64"
-          },
-          {
-            "name": "need_take_pnl_pc",
-            "type": "u64"
-          },
-          {
-            "name": "total_pnl_pc",
-            "type": "u64"
-          },
-          {
-            "name": "total_pnl_coin",
-            "type": "u64"
-          },
-          {
-            "name": "pool_open_time",
-            "type": "u64"
-          },
-          {
-            "name": "punish_pc_amount",
-            "type": "u64"
-          },
-          {
-            "name": "punish_coin_amount",
-            "type": "u64"
-          },
-          {
-            "name": "orderbook_to_init_time",
-            "type": "u64"
-          },
-          {
-            "name": "swap_coin_in_amount",
-            "type": "u128"
-          },
-          {
-            "name": "swap_pc_out_amount",
-            "type": "u128"
-          },
-          {
-            "name": "swap_take_pc_fee",
-            "type": "u64"
-          },
-          {
-            "name": "swap_pc_in_amount",
-            "type": "u128"
-          },
-          {
-            "name": "swap_coin_out_amount",
-            "type": "u128"
-          },
-          {
-            "name": "swap_take_coin_fee",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "AmmConfig",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "pnl_owner",
-            "type": "pubkey"
-          },
-          {
-            "name": "cancel_owner",
-            "type": "pubkey"
-          },
-          {
-            "name": "pending1",
-            "type": {
-              "array": [
-                "u64",
-                28
-              ]
-            }
-          },
-          {
-            "name": "pending2",
-            "type": {
-              "array": [
-                "u64",
-                32
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "LastOrderDistance",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "last_order_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "last_order_denominator",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "NeedTake",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "need_take_pc",
-            "type": "u64"
-          },
-          {
-            "name": "need_take_coin",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SwapInstructionBaseIn",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "amount_in",
-            "type": "u64"
-          },
-          {
-            "name": "minimum_amount_out",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SwapInstructionBaseOut",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "max_amount_in",
-            "type": "u64"
-          },
-          {
-            "name": "amount_out",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "TargetOrders",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "owner",
-            "type": {
-              "array": [
-                "u64",
-                4
-              ]
-            }
-          },
-          {
-            "name": "buy_orders",
-            "type": {
-              "array": [
-                {
-                  "defined": {
-                    "name": "TargetOrder"
-                  }
-                },
-                50
-              ]
-            }
-          },
-          {
-            "name": "padding1",
-            "type": {
-              "array": [
-                "u64",
-                8
-              ]
-            }
-          },
-          {
-            "name": "target_x",
-            "type": "u128"
-          },
-          {
-            "name": "target_y",
-            "type": "u128"
-          },
-          {
-            "name": "plan_x_buy",
-            "type": "u128"
-          },
-          {
-            "name": "plan_y_buy",
-            "type": "u128"
-          },
-          {
-            "name": "plan_x_sell",
-            "type": "u128"
-          },
-          {
-            "name": "plan_y_sell",
-            "type": "u128"
-          },
-          {
-            "name": "placed_x",
-            "type": "u128"
-          },
-          {
-            "name": "placed_y",
-            "type": "u128"
-          },
-          {
-            "name": "calc_pnl_x",
-            "type": "u128"
-          },
-          {
-            "name": "calc_pnl_y",
-            "type": "u128"
-          },
-          {
-            "name": "sell_orders",
-            "type": {
-              "array": [
-                {
-                  "defined": {
-                    "name": "TargetOrder"
-                  }
-                },
-                50
-              ]
-            }
-          },
-          {
-            "name": "padding2",
-            "type": {
-              "array": [
-                "u64",
-                6
-              ]
-            }
-          },
-          {
-            "name": "replace_buy_client_id",
-            "type": {
-              "array": [
-                "u64",
-                10
-              ]
-            }
-          },
-          {
-            "name": "replace_sell_client_id",
-            "type": {
-              "array": [
-                "u64",
-                10
-              ]
-            }
-          },
-          {
-            "name": "last_order_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "last_order_denominator",
-            "type": "u64"
-          },
-          {
-            "name": "plan_orders_cur",
-            "type": "u64"
-          },
-          {
-            "name": "place_orders_cur",
-            "type": "u64"
-          },
-          {
-            "name": "valid_buy_order_num",
-            "type": "u64"
-          },
-          {
-            "name": "valid_sell_order_num",
-            "type": "u64"
-          },
-          {
-            "name": "padding3",
-            "type": {
-              "array": [
-                "u64",
-                10
-              ]
-            }
-          },
-          {
-            "name": "free_slot_bits",
-            "type": "u128"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Fees",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "min_separate_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "min_separate_denominator",
-            "type": "u64"
-          },
-          {
-            "name": "trade_fee_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "trade_fee_denominator",
-            "type": "u64"
-          },
-          {
-            "name": "pnl_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "pnl_denominator",
-            "type": "u64"
-          },
-          {
-            "name": "swap_fee_numerator",
-            "type": "u64"
-          },
-          {
-            "name": "swap_fee_denominator",
-            "type": "u64"
-          }
-        ]
-      }
-    },
-    {
-      "name": "AmmInfo",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "status",
-            "type": "u64"
-          },
-          {
-            "name": "nonce",
-            "type": "u64"
-          },
-          {
-            "name": "order_num",
-            "type": "u64"
-          },
-          {
-            "name": "depth",
-            "type": "u64"
-          },
-          {
-            "name": "coin_decimals",
-            "type": "u64"
-          },
-          {
-            "name": "pc_decimals",
-            "type": "u64"
-          },
-          {
-            "name": "state",
-            "type": "u64"
-          },
-          {
-            "name": "reset_flag",
-            "type": "u64"
-          },
-          {
-            "name": "min_size",
-            "type": "u64"
-          },
-          {
-            "name": "vol_max_cut_ratio",
-            "type": "u64"
-          },
-          {
-            "name": "amount_wave",
-            "type": "u64"
-          },
-          {
-            "name": "coin_lot_size",
-            "type": "u64"
-          },
-          {
-            "name": "pc_lot_size",
-            "type": "u64"
-          },
-          {
-            "name": "min_price_multiplier",
-            "type": "u64"
-          },
-          {
-            "name": "max_price_multiplier",
-            "type": "u64"
-          },
-          {
-            "name": "sys_decimal_value",
-            "type": "u64"
-          },
-          {
-            "name": "fees",
-            "type": {
-              "defined": {
-                "name": "Fees"
-              }
-            }
-          },
-          {
-            "name": "out_put",
-            "type": {
-              "defined": {
-                "name": "OutPutData"
-              }
-            }
-          },
-          {
-            "name": "token_coin",
-            "type": "pubkey"
-          },
-          {
-            "name": "token_pc",
-            "type": "pubkey"
-          },
-          {
-            "name": "coin_mint",
-            "type": "pubkey"
-          },
-          {
-            "name": "pc_mint",
-            "type": "pubkey"
-          },
-          {
-            "name": "lp_mint",
-            "type": "pubkey"
-          },
-          {
-            "name": "open_orders",
-            "type": "pubkey"
-          },
-          {
-            "name": "market",
-            "type": "pubkey"
-          },
-          {
-            "name": "serum_dex",
-            "type": "pubkey"
-          },
-          {
-            "name": "target_orders",
-            "type": "pubkey"
-          },
-          {
-            "name": "withdraw_queue",
-            "type": "pubkey"
-          },
-          {
-            "name": "token_temp_lp",
-            "type": "pubkey"
-          },
-          {
-            "name": "amm_owner",
-            "type": "pubkey"
-          },
-          {
-            "name": "lp_amount",
-            "type": "u64"
-          },
-          {
-            "name": "client_order_id",
-            "type": "u64"
-          },
-          {
-            "name": "padding",
-            "type": {
-              "array": [
-                "u64",
-                2
-              ]
-            }
-          }
-        ]
-      }
     }
   ]
 }

@@ -1,0 +1,477 @@
+{
+    "address": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+    "metadata": {
+      "name": "raydium_amm_v4",
+      "version": "0.0.0",
+      "spec": "0.1.0"
+    },
+    "instructions": [
+      {
+        "name": "initialize",
+        "discriminator": [
+          175,
+          175,
+          109,
+          31,
+          13,
+          152,
+          155,
+          237
+        ],
+        "accounts": [
+          {
+            "name": "amm",
+            "writable": true
+          },
+          {
+            "name": "authority"
+          },
+          {
+            "name": "open_orders",
+            "writable": true
+          },
+          {
+            "name": "lp_mint",
+            "writable": true
+          },
+          {
+            "name": "coin_mint"
+          },
+          {
+            "name": "pc_mint"
+          },
+          {
+            "name": "coin_vault",
+            "writable": true
+          },
+          {
+            "name": "pc_vault",
+            "writable": true
+          },
+          {
+            "name": "lp_vault",
+            "writable": true
+          },
+          {
+            "name": "market"
+          },
+          {
+            "name": "market_bids",
+            "writable": true
+          },
+          {
+            "name": "market_asks",
+            "writable": true
+          },
+          {
+            "name": "market_event_queue",
+            "writable": true
+          },
+          {
+            "name": "market_coin_vault",
+            "writable": true
+          },
+          {
+            "name": "market_pc_vault",
+            "writable": true
+          },
+          {
+            "name": "market_vault_signer"
+          },
+          {
+            "name": "user_wallet",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "token_program"
+          },
+          {
+            "name": "rent"
+          }
+        ],
+        "args": [
+          {
+            "name": "nonce",
+            "type": "u8"
+          },
+          {
+            "name": "open_time",
+            "type": "u64"
+          }
+        ]
+      },
+      {
+        "name": "deposit",
+        "discriminator": [
+          242,
+          35,
+          198,
+          137,
+          82,
+          225,
+          242,
+          182
+        ],
+        "accounts": [
+          {
+            "name": "amm",
+            "writable": true
+          },
+          {
+            "name": "authority"
+          },
+          {
+            "name": "open_orders",
+            "writable": true
+          },
+          {
+            "name": "lp_mint",
+            "writable": true
+          },
+          {
+            "name": "coin_vault",
+            "writable": true
+          },
+          {
+            "name": "pc_vault",
+            "writable": true
+          },
+          {
+            "name": "user_coin",
+            "writable": true
+          },
+          {
+            "name": "user_pc",
+            "writable": true
+          },
+          {
+            "name": "user_lp",
+            "writable": true
+          },
+          {
+            "name": "user_owner",
+            "signer": true
+          },
+          {
+            "name": "token_program"
+          }
+        ],
+        "args": [
+          {
+            "name": "max_coin",
+            "type": "u64"
+          },
+          {
+            "name": "max_pc",
+            "type": "u64"
+          },
+          {
+            "name": "min_lp",
+            "type": "u64"
+          }
+        ]
+      },
+      {
+        "name": "withdraw",
+        "discriminator": [
+          183,
+          18,
+          70,
+          156,
+          148,
+          109,
+          161,
+          34
+        ],
+        "accounts": [
+          {
+            "name": "amm",
+            "writable": true
+          },
+          {
+            "name": "authority"
+          },
+          {
+            "name": "open_orders",
+            "writable": true
+          },
+          {
+            "name": "lp_mint",
+            "writable": true
+          },
+          {
+            "name": "coin_vault",
+            "writable": true
+          },
+          {
+            "name": "pc_vault",
+            "writable": true
+          },
+          {
+            "name": "user_coin",
+            "writable": true
+          },
+          {
+            "name": "user_pc",
+            "writable": true
+          },
+          {
+            "name": "user_lp",
+            "writable": true
+          },
+          {
+            "name": "user_owner",
+            "signer": true
+          },
+          {
+            "name": "token_program"
+          }
+        ],
+        "args": [
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      },
+      {
+        "name": "swap_base_in",
+        "discriminator": [
+          42,
+          236,
+          72,
+          162,
+          242,
+          24,
+          39,
+          84
+        ],
+        "accounts": [
+          {
+            "name": "amm",
+            "writable": true
+          },
+          {
+            "name": "authority"
+          },
+          {
+            "name": "open_orders",
+            "writable": true
+          },
+          {
+            "name": "coin_vault",
+            "writable": true
+          },
+          {
+            "name": "pc_vault",
+            "writable": true
+          },
+          {
+            "name": "market",
+            "writable": true
+          },
+          {
+            "name": "market_bids",
+            "writable": true
+          },
+          {
+            "name": "market_asks",
+            "writable": true
+          },
+          {
+            "name": "market_event_queue",
+            "writable": true
+          },
+          {
+            "name": "market_coin_vault",
+            "writable": true
+          },
+          {
+            "name": "market_pc_vault",
+            "writable": true
+          },
+          {
+            "name": "market_vault_signer"
+          },
+          {
+            "name": "user_source",
+            "writable": true
+          },
+          {
+            "name": "user_destination",
+            "writable": true
+          },
+          {
+            "name": "user_owner",
+            "signer": true
+          },
+          {
+            "name": "token_program"
+          }
+        ],
+        "args": [
+          {
+            "name": "amount_in",
+            "type": "u64"
+          },
+          {
+            "name": "min_amount_out",
+            "type": "u64"
+          }
+        ]
+      },
+      {
+        "name": "swap_base_out",
+        "discriminator": [
+          163,
+          210,
+          155,
+          208,
+          175,
+          146,
+          213,
+          150
+        ],
+        "accounts": [
+          {
+            "name": "amm",
+            "writable": true
+          },
+          {
+            "name": "authority"
+          },
+          {
+            "name": "open_orders",
+            "writable": true
+          },
+          {
+            "name": "coin_vault",
+            "writable": true
+          },
+          {
+            "name": "pc_vault",
+            "writable": true
+          },
+          {
+            "name": "market",
+            "writable": true
+          },
+          {
+            "name": "market_bids",
+            "writable": true
+          },
+          {
+            "name": "market_asks",
+            "writable": true
+          },
+          {
+            "name": "market_event_queue",
+            "writable": true
+          },
+          {
+            "name": "market_coin_vault",
+            "writable": true
+          },
+          {
+            "name": "market_pc_vault",
+            "writable": true
+          },
+          {
+            "name": "market_vault_signer"
+          },
+          {
+            "name": "user_source",
+            "writable": true
+          },
+          {
+            "name": "user_destination",
+            "writable": true
+          },
+          {
+            "name": "user_owner",
+            "signer": true
+          },
+          {
+            "name": "token_program"
+          }
+        ],
+        "args": [
+          {
+            "name": "max_amount_in",
+            "type": "u64"
+          },
+          {
+            "name": "amount_out",
+            "type": "u64"
+          }
+        ]
+      }
+    ],
+    "accounts": [
+      {
+        "name": "ammInfo",
+        "discriminator": [
+          98,
+          201,
+          19,
+          96,
+          139,
+          192,
+          131,
+          206
+        ]
+      }
+    ],
+    "types": [
+      {
+        "name": "ammInfo",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "status",
+              "type": "u64"
+            },
+            {
+              "name": "nonce",
+              "type": "u8"
+            },
+            {
+              "name": "order_num",
+              "type": "u64"
+            },
+            {
+              "name": "depth",
+              "type": "u64"
+            },
+            {
+              "name": "coin_decimals",
+              "type": "u8"
+            },
+            {
+              "name": "pc_decimals",
+              "type": "u8"
+            },
+            {
+              "name": "state",
+              "type": "u64"
+            },
+            {
+              "name": "open_time",
+              "type": "u64"
+            },
+            {
+              "name": "padding",
+              "type": {
+                "array": [
+                  "u8",
+                  64
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

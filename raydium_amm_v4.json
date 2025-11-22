@@ -798,6 +798,11 @@
           "writable": true
         },
         {
+          "name": "ammTargetOrders",
+          "writable": true,
+          "optional": true
+        },
+        {
           "name": "poolCoinTokenAccount",
           "writable": true
         },

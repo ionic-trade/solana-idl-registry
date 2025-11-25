@@ -5997,6 +5997,44 @@
       }
     },
     {
+      "name": "Payload",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "map",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "PayloadEntry"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PayloadEntry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "key",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": {
+              "defined": {
+                "name": "PayloadType"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
       "name": "Uses",
       "type": {
         "kind": "struct",

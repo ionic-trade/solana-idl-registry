@@ -4357,6 +4357,121 @@
           }
         }
       ]
+    },
+    {
+      "name": "resize",
+      "discriminator": [
+        74,
+        27,
+        74,
+        155,
+        56,
+        134,
+        175,
+        125
+      ],
+      "accounts": [
+        {
+          "name": "metadata",
+          "docs": [
+            "The metadata account of the digital asset"
+          ],
+          "writable": true
+        },
+        {
+          "name": "edition",
+          "docs": [
+            "The master edition or edition account of the digital asset, an uninitialized account for fungible assets"
+          ],
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "docs": [
+            "Mint of token asset"
+          ]
+        },
+        {
+          "name": "payer",
+          "docs": [
+            "The recipient of the excess rent and authority if the authority account is not present"
+          ],
+          "writable": true
+        },
+        {
+          "name": "authority",
+          "docs": [
+            "Owner of the asset for (p)NFTs, or mint authority for fungible assets, if different from the payer"
+          ],
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "token",
+          "docs": [
+            "Token or Associated Token account"
+          ],
+          "optional": true
+        },
+        {
+          "name": "system_program",
+          "docs": [
+            "System program"
+          ]
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "close_accounts",
+      "discriminator": [
+        171,
+        222,
+        94,
+        233,
+        34,
+        250,
+        202,
+        1
+      ],
+      "accounts": [
+        {
+          "name": "metadata",
+          "docs": [
+            "Metadata (pda of ['metadata', program id, mint id])"
+          ],
+          "writable": true
+        },
+        {
+          "name": "edition",
+          "docs": [
+            "Edition of the asset"
+          ],
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "docs": [
+            "Mint of token asset"
+          ],
+          "writable": true
+        },
+        {
+          "name": "authority",
+          "docs": [
+            "Authority to close ownerless accounts"
+          ],
+          "signer": true
+        },
+        {
+          "name": "destination",
+          "docs": [
+            "The destination account that will receive the rent."
+          ],
+          "writable": true
+        }
+      ],
+      "args": []
     }
   ],
   "accounts": [
@@ -5548,6 +5663,16 @@
       "code": 200,
       "name": "InvalidEditionAccountLength",
       "msg": "Edition account has an invalid length"
+    },
+    {
+      "code": 201,
+      "name": "AccountAlreadyResized",
+      "msg": "Account has already been resized"
+    },
+    {
+      "code": 202,
+      "name": "ConditionsForClosingNotMet",
+      "msg": "Conditions for closing not met"
     }
   ],
   "types": [
@@ -6006,28 +6131,8 @@
             "type": {
               "vec": {
                 "defined": {
-                  "name": "PayloadEntry"
+                  "name": "PayloadType"
                 }
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "name": "PayloadEntry",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "key",
-            "type": "string"
-          },
-          {
-            "name": "value",
-            "type": {
-              "defined": {
-                "name": "PayloadType"
               }
             }
           }

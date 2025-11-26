@@ -31,3 +31,7 @@ This is Ionic Solana IDL registry - first complete and always up-to-date registr
 
 - Drift `dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH`
 - Jupiter Perpetuals `PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu`
+
+## Additional
+
+- Metaplex Token Metadata `metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s`

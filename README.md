@@ -8,6 +8,7 @@ This is Ionic Solana IDL registry - first complete and always up-to-date registr
 
 - System `11111111111111111111111111111111`
 - SPL Token `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+- Token 2022 `TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb`
 - Compute Budget `ComputeBudget111111111111111111111111111111`
 
 ## Launchpads

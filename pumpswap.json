@@ -1,7 +1,7 @@
 {
   "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
   "metadata": {
-    "name": "pump_amm",
+    "name": "pump_swap",
     "version": "0.1.0",
     "spec": "0.1.0",
     "description": "Created with Anchor"

@@ -3115,7 +3115,7 @@
         },
         {
           "name": "market_vault_signer_nonce",
-          "type": "u8"
+          "type": "u64"
         }
       ]
     },
